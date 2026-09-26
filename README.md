@@ -8,9 +8,9 @@ Proyecto práctico para simular un flujo de desarrollo colaborativo usando Git y
 
 | Rol | Estudiante | Rama Asignada | Archivo Creado | Tarea Principal |
 | :--- | :--- | :--- | :--- | :--- |
-| **Estudiante 1** | [Nombre del compañero] | `rama-html` | `index.html` | Estructuración semántica pura (HTML). |
-| **Estudiante 2** | [Nombre del compañero] | `rama-css` | `style.css` | Diseño visual, paleta y tipografía (CSS). |
-| **Estudiante 3** | [Nombre del compañero] | `rama-js` | `app.js` | Interactividad y alertas dinámicas (JS). |
+| **Estudiante 1** | Juan pablo garces ortiz | `rama-html` | `index.html` | Estructuración semántica pura (HTML). |
+| **Estudiante 2** | carlos mario lopez martinez | `rama-css` | `style.css` | Diseño visual, paleta y tipografía (CSS). |
+| **Estudiante 3** | yublian verbel | `rama-js` | `app.js` | Interactividad y alertas dinámicas (JS). |
 | **Estudiante 4** | Juan Esteban De Los Rios | `main` | Integración | Scrum Master, gestión de ramas, merges y vinculación final. |
 
 ---
