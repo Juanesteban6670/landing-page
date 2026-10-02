@@ -3,36 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FarmaSalud - Farmacia & Droguería</title>
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="En FarmaSalud encuentras productos esenciales para tu bienestar, con atención cercana y disponibilidad clara.">
+  <title>FarmaSalud | Bienestar cerca de ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="STYLE.CSS">
 </head>
 <body>
-  <header>
-    <h1>FarmaSalud</h1>
-    <p>Cuidamos tu bienestar con los mejores medicamentos y precios.</p>
+  <div class="topline">
+    <p>Tu bienestar, más cerca. <span>Atención de lunes a sábado</span></p>
+    <a href="#productos">Explorar productos <span aria-hidden="true">↘</span></a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="FarmaSalud, ir al inicio">
+      <span class="brand-mark" aria-hidden="true">+</span>
+      <span>farma<span>salud</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#compromiso">Nuestro compromiso</a>
+    </nav>
+    <button class="cart-button" type="button" aria-label="Carrito, 0 productos">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg>
+      <span>Mi carrito</span><span class="cart-count" aria-hidden="true">0</span>
+    </button>
   </header>
 
-  <main>
-    <section class="banner">
-      <h2>Consulta y Venta de Medicamentos</h2>
-      <p>Disponibilidad inmediata en analgésicos, antibióticos y cuidado personal.</p>
-      <button id="btn-promocion">Ver Promoción del Día</button>
-      <p id="mensaje-promocion"></p>
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> FARMACIA DE CONFIANZA</p>
+        <h1 id="hero-title">Pequeños cuidados.<br><em>Grandes días.</em></h1>
+        <p class="hero-description">Lo esencial para sentirte bien, con atención amable y opciones para cada día.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#productos">Conocer productos <span aria-hidden="true">↗</span></a>
+          <p><span class="open-dot"></span> Estamos para ayudarte</p>
+        </div>
+        <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>Salud cercana, cuidado de verdad.</span></div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1100&q=85" alt="Productos de farmacia y cuidado personal" fetchpriority="high">
+        <div class="image-label"><span>FARMA / 01</span><span>ESENCIALES DE CUIDADO</span></div>
+        <div class="hero-stamp" aria-hidden="true"><span>cuidamos</span><strong>de ti</strong><span>cada día</span></div>
+      </div>
     </section>
 
-    <section class="inventario">
-      <h3>Productos Destacados</h3>
-      <ul>
-        <li>Acetaminofén 500mg - <strong>En stock</strong></li>
-        <li>Amoxicilina 500mg - <strong>En stock</strong></li>
-        <li>Alcohol Antiséptico 700ml - <strong>En stock</strong></li>
-        <li>Suero Oral Electrolitos - <strong>Últimas unidades</strong></li>
-      </ul>
+    <section class="catalogue" id="productos" aria-labelledby="catalogue-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">UNA SELECCIÓN PARA TI</p>
+          <h2 id="catalogue-title">Lo que necesitas, <em>sin complicaciones.</em></h2>
+        </div>
+        <label class="search-box">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <span class="visually-hidden">Buscar productos</span>
+          <input id="product-search" type="search" placeholder="Buscar productos..." autocomplete="off">
+        </label>
+      </div>
+
+      <div class="catalogue-tools">
+        <div class="filters" role="group" aria-label="Filtrar productos por categoría">
+          <button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todos <span>04</span></button>
+          <button class="filter-button" type="button" data-filter="bienestar" aria-pressed="false">Bienestar</button>
+          <button class="filter-button" type="button" data-filter="cuidado" aria-pressed="false">Cuidado personal</button>
+          <button class="filter-button" type="button" data-filter="primeros-auxilios" aria-pressed="false">Primeros auxilios</button>
+        </div>
+        <p class="result-count" aria-live="polite">4 productos</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="bienestar" data-search="acetaminofen 500 mg alivio bienestar">
+          <div class="product-art art-peach"><span class="product-number">01 / BIENESTAR</span><span class="product-symbol" aria-hidden="true">✳</span><span class="product-pack pack-tablets"><b>farma<br>salud</b><small>ACETAMINOFÉN<br>500 mg · 16 tabletas</small></span></div>
+          <div class="product-info"><div><p class="availability"><span></span> Disponible</p><h3>Acetaminofén 500 mg</h3><p class="product-detail">Caja x 16 tabletas</p></div><div class="product-buy"><strong>$ 8.900</strong><button type="button" class="add-button" aria-label="Agregar Acetaminofén 500 mg al carrito">+</button></div></div>
+        </article>
+        <article class="product-card" data-category="bienestar" data-search="suero oral electrolitos hidratacion bienestar">
+          <div class="product-art art-green"><span class="product-number">02 / BIENESTAR</span><span class="product-symbol" aria-hidden="true">〰</span><span class="product-pack pack-bottle"><b>farma<br>salud</b><small>SUERO ORAL<br>Electrolitos · 500 ml</small></span></div>
+          <div class="product-info"><div><p class="availability"><span></span> Disponible</p><h3>Suero oral</h3><p class="product-detail">Solución con electrolitos · 500 ml</p></div><div class="product-buy"><strong>$ 4.500</strong><button type="button" class="add-button" aria-label="Agregar Suero oral al carrito">+</button></div></div>
+        </article>
+        <article class="product-card" data-category="cuidado" data-search="vitamina c 500 mg cuidado bienestar">
+          <div class="product-art art-yellow"><span class="product-number">03 / CUIDADO</span><span class="product-symbol" aria-hidden="true">☼</span><span class="product-pack pack-jar"><b>farma<br>salud</b><small>VITAMINA C<br>500 mg · 30 tabletas</small></span></div>
+          <div class="product-info"><div><p class="availability"><span></span> Disponible</p><h3>Vitamina C 500 mg</h3><p class="product-detail">Frasco x 30 tabletas</p></div><div class="product-buy"><strong>$ 12.900</strong><button type="button" class="add-button" aria-label="Agregar Vitamina C 500 mg al carrito">+</button></div></div>
+        </article>
+        <article class="product-card" data-category="primeros-auxilios" data-search="alcohol antiseptico 700 ml primeros auxilios cuidado">
+          <div class="product-art art-blue"><span class="product-number">04 / ESENCIAL</span><span class="product-symbol" aria-hidden="true">✳</span><span class="product-pack pack-bottle pack-alcohol"><b>farma<br>salud</b><small>ALCOHOL<br>Antiséptico · 700 ml</small></span></div>
+          <div class="product-info"><div><p class="availability"><span></span> Disponible</p><h3>Alcohol antiséptico</h3><p class="product-detail">Frasco · 700 ml</p></div><div class="product-buy"><strong>$ 6.200</strong><button type="button" class="add-button" aria-label="Agregar Alcohol antiséptico al carrito">+</button></div></div>
+        </article>
+      </div>
+      <p class="empty-state" hidden>No encontramos productos con esa búsqueda. Prueba otro término.</p>
+    </section>
+
+    <section class="promo" aria-labelledby="promo-title">
+      <div class="promo-mark" aria-hidden="true">%</div>
+      <div class="promo-copy"><p class="eyebrow">UN DETALLE PARA TI</p><h2 id="promo-title">Hoy, cuidarte tiene <em>un 20% extra.</em></h2><p>En productos seleccionados de bienestar. Pregunta por la disponibilidad en tienda.</p></div>
+      <div class="promo-action"><button id="btn-promocion" class="button button-light" type="button">Ver mi código <span aria-hidden="true">↗</span></button><p id="mensaje-promocion" aria-live="polite"></p></div>
+    </section>
+
+    <section class="commitment" id="compromiso" aria-label="Nuestro compromiso">
+      <div><span class="commitment-icon" aria-hidden="true">♡</span><p><strong>Atención cercana</strong><span>Personas listas para escucharte.</span></p></div>
+      <div><span class="commitment-icon" aria-hidden="true">✳</span><p><strong>Lo esencial, bien elegido</strong><span>Productos para acompañar tu día.</span></p></div>
+      <div><span class="commitment-icon" aria-hidden="true">⌂</span><p><strong>Aquí, para ti</strong><span>Un equipo de confianza en tu barrio.</span></p></div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 FarmaSalud. Todos los derechos reservados.</p>
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="#inicio" aria-label="FarmaSalud, volver al inicio"><span class="brand-mark" aria-hidden="true">+</span><span>farma<span>salud</span></span></a>
+    <p>Tu salud merece cuidado cercano.</p>
+    <small>Los precios y la disponibilidad son de referencia. Consulta en tienda. Este sitio no reemplaza la orientación de un profesional de salud.</small>
+    <span class="copyright">© 2026 FarmaSalud</span>
   </footer>
   <script src="main.js"></script>
 </body>
